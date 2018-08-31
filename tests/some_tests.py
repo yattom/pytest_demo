@@ -17,4 +17,15 @@ def test_file():
 def test_read(test_file):
     assert test_file.read() == b'test\r\n'
 
+import requests
+
+def test_mocker(mocker):
+    class DummyRequest:
+        status_code = 200
+    mocker.patch('requests.get', return_value=DummyRequest())
+    r = requests.get('https://example.com')
+    assert r.status_code == 200
+
+
+
 
