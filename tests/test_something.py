@@ -26,6 +26,19 @@ def test_mocker(mocker):
     r = requests.get('https://example.com')
     assert r.status_code == 200
 
+@pytest.fixture
+def request_ok(mocker):
+    class DummyRequest:
+        status_code = 200
+    mocker.patch('requests.get', return_value=DummyRequest())
+
+def test_request_ok(request_ok):
+    r = requests.get('https://example.com')
+    assert r.status_code == 200
+
+
+
+
 
 
 

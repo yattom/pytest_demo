@@ -21,7 +21,8 @@
 
 # mocks
 - [x] mocker from pytest-mock
-- [ ] mock with fixture
+- [x] mock with fixture
+- [ ] giving parameters to mock thru fixture
 
 # running
 - [ ] -v option
