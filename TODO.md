@@ -2,7 +2,7 @@
 - [x] simple equality
 - [ ] list equality
 - [ ] dict equality
-- [ ] more friendly object repr
+- [x] more friendly object repr
 
 # fixtures
 - [x] simple to define and use
